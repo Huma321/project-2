@@ -1,0 +1,451 @@
+@import "./variable";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $ts-font-Poppins;
+    font-size: 18px;
+    html,
+    p {
+        @include xxl-down {
+            font-size: 100%;
+        }
+        @include lg-down {
+            font-size: 90%;
+        }
+        @include sm-down {
+            font-size: 85%;
+        }
+    }
+    h1 {
+        font-weight: bold;
+        @include xxl-down {
+            font-size: 3vw;
+        }
+        @include lg-down {
+            font-size: 4vw;
+        }
+        @include sm-down {
+            font-size: 4.5vw;
+        }
+    }
+}
+
+@mixin btn {
+    color: $ts-white-color;
+    padding: 16px 38px;
+    margin: 35px 0px;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    background-color: $ts-Ultramarine-Blue-color;
+}
+
+@mixin card {
+    border: none;
+    margin: 20px;
+    padding: 0px 30px;
+    @include xxl-down {
+        margin: 5px;
+        padding: 0px;
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: 3px 8px 15px 5px rgb(155, 175, 219);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0px;
+    @include box-shadow();
+}
+
+.flex-container {
+    display: flex;
+    @include lg-down {
+        flex-direction: column;
+    }
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+}
+
+h3 {
+    padding: 0px 10px 0px 0px;
+}
+
+p {
+    padding: 10px 0px;
+    line-height: 26px;
+}
+
+i {
+    color: $ts-Mikado-Yellow-color;
+    margin: 3px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    @include btn();
+}
+
+.card {
+    @include card();
+}
+
+.container-hero {
+    .card {
+        &-md {
+            align-items: center;
+        }
+        .btn {
+            width: 80%;
+            height: 80px;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 40px 0px 20px 0px;
+        li {
+            padding: 10px 0px;
+            display: flex;
+            .fa-youtube {
+                color: #da022b;
+            }
+            .fa-indian-rupee-sign {
+                color: green;
+            }
+            .fa-certificate {
+                color: yellow;
+            }
+            .fa-award {
+                color: blue;
+            }
+            .fa-clipboard-list {
+                color: #48bf84;
+            }
+        }
+    }
+    @include xxl-down {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+.d-flex {
+    #dp {
+        margin: 5px 0px;
+        width: 80px;
+        height: auto;
+    }
+    @include lg-down {
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+.card-body {
+    @include sm-down {
+        padding: 0;
+    }
+}
+
+.home-section {
+    margin: 70px 30px;
+    .card {
+        margin: auto;
+        .fa-clock {
+            color: #48bf84;
+        }
+        .fa-hourglass-end {
+            color: #da022b;
+        }
+    }
+    @include xxl-down {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+.button-center {
+    text-align: center;
+    margin-top: 28px;
+    .ts-btn-primary {
+        @include btn();
+        padding: 10px 35px;
+        border-radius: 4px;
+    }
+}
+
+.sub-card {
+    @include box-shadow();
+    padding: 60px 30px;
+    margin: 55px 0px;
+    #dp {
+        height: auto;
+    }
+    .card-text {
+        margin: 5px 35px;
+    }
+    .ts-btn-primary {
+        @include btn();
+        font-weight: 600;
+        margin: 5px 10px;
+        padding: 5px 15px;
+        border-radius: 3px;
+    }
+}
+
+#dp {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: none !important;
+    margin: 10px;
+}
+
+#logo {
+    margin: 8px 10px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: none !important;
+}
+
+span {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1440px;
+    @include xxl-down {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+#row {
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    @include xxl-up {
+        flex-direction: row;
+        padding: 5px;
+        margin: 10px auto;
+    }
+    @include lg-down {
+        flex-direction: row;
+        padding: 5px;
+        margin: 20px auto;
+    }
+    @include sm-down {
+        padding: 0px;
+        margin: 5px auto;
+    }
+}
+
+.top-section {
+    background-color: $ts-Ultramarine-Blue-color;
+    padding: 47px 70px;
+    margin: 70px 0px;
+    color: $ts-white-color;
+    .btn {
+        @include btn();
+        background-color: $ts-white-color;
+        color: $ts-Black-color;
+    }
+}
+
+.mid-section {
+    padding-top: 50px;
+    .row {
+        padding: 30px 0px;
+    }
+    @include xxl-down {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+#span-color {
+    color: $ts-Ultramarine-Blue-color;
+}
+
+.bottom-section {
+    margin: 100px 30px;
+    background-color: $ts-Ultramarine-Blue-color;
+    color: $ts-white-color;
+    .card {
+        background: transparent;
+    }
+    .card-body {
+        ol {
+            padding: 0px;
+            li {
+                padding: 20px;
+            }
+        }
+        .bg-yellow::before {
+            background-color: $ts-Mikado-Yellow-color;
+            padding: 10px;
+            margin: 0px 54px 0px 0px;
+            color: $ts-Black-color;
+        }
+        ol {
+            counter-reset: myOrderedListItemsCounter;
+        }
+        ol li {
+            list-style-type: none;
+            position: relative;
+        }
+        ol li:before {
+            counter-increment: myOrderedListItemsCounter;
+            content: counter(myOrderedListItemsCounter)"";
+            margin-right: .5em;
+        }
+        hr {
+            margin-top: 60px;
+            border: 1.5px solid $ts-white-color;
+        }
+        .sub-div {
+            background-color: $ts-white-color;
+            @include box-shadow();
+            box-shadow: 3px 8px 15px 5px $ts-Sapphire-Blue-color;
+            border-radius: 4px;
+            color: $ts-Black-color;
+            padding: 20px 30px;
+            margin: 40px;
+        }
+        h5 {
+            color: $ts-Mikado-Yellow-color;
+            font-size: 70px;
+        }
+    }
+    @include xxl-down {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+.container-footer {
+    margin: 100px 70px;
+    .skills-bar {
+        margin: 45px 0px;
+        .bar {
+            margin: 50px 0px;
+            .info span {
+                font-size: 20px;
+                color: $ts-Ultramarine-Blue-color;
+                padding: 0px 10px;
+            }
+            .progress-bar {
+                border-radius: 10px;
+                background: $ts-Mikado-Yellow-color;
+            }
+        }
+    }
+    @include xxl-down {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+.container-footer {
+    margin-bottom: 10px;
+    .tab-wrap {
+        width: 90%;
+        text-align: left;
+        padding: 0;
+        position: relative;
+        @include sm-down {
+            margin: 0;
+            padding: 0;
+        }
+        ol {
+            list-style: none;
+        }
+    }
+    .tab-wrap input[type="radio"] {
+        position: absolute;
+    }
+    .tab-wrap li {
+        float: left;
+        display: block;
+    }
+    .tab-wrap label {
+        font-size: 24px;
+        border-bottom: 3px solid gray;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0px;
+        padding: 20px;
+        cursor: pointer;
+        color: gray;
+    }
+    .tab-wrap {
+        #tab-1,
+        #tab-2,
+        #tab-3 {
+            height: 0px;
+        }
+    }
+    .tab-wrap .tab-content {
+        position: absolute;
+        left: 0;
+        padding: 20px 0px;
+        display: none;
+        // list style type disc not supported
+        ul {
+            list-style-type: disc;
+            color: gray;
+            li {
+                float: unset;
+            }
+        }
+        .float-left {
+            width: 45%;
+            margin: 30px 0px;
+        }
+        .float-right {
+            text-align: right;
+            width: 45%;
+            margin: 30px 0px;
+        }
+        h6 {
+            text-align: center;
+        }
+    }
+    .tab-wrap [id^="tab"]:checked+label {
+        color: $ts-Ultramarine-Blue-color;
+        border-bottom: 3px solid $ts-Ultramarine-Blue-color;
+    }
+    .tab-wrap [id^="tab"]:checked~.tab-content {
+        display: block;
+    }
+    .btn {
+        border-radius: 4px;
+        padding: 15px 100px;
+        width: 100%;
+    }
+}
+
+.ts-container {
+    height: 350px;
+    max-width: 100%;
+    background-color: $ts-Dark-Jungle-Green-color;
+}
+
+// when screen size 991px how to fix container
+@media screen and (max-width: 991px) {
+    .ts-container {
+        margin-top: 55%;
+    }
+}
